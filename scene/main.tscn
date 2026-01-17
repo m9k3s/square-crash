@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://3cjifaldn3bh"]
+[gd_scene load_steps=4 format=3 uid="uid://3cjifaldn3bh"]
 
 [ext_resource type="Script" uid="uid://dnp23whcd05y1" path="res://script/main.gd" id="1_v0l8b"]
 [ext_resource type="PackedScene" uid="uid://bi2w8suu3jxaj" path="res://scene/main_gui.tscn" id="2_v0l8b"]
+[ext_resource type="AudioStream" uid="uid://0rpq7gfhsggg" path="res://music/untitled.ogg" id="3_wp4xf"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_v0l8b")
 
 [node name="main_gui" parent="." instance=ExtResource("2_v0l8b")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wp4xf")
+volume_db = -10.0
+pitch_scale = 0.7
+autoplay = true
+playback_type = 1

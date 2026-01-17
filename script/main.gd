@@ -25,14 +25,14 @@ func _ready() -> void:
 	add_enemy()
 	player_life = 3
 	player_goal = 0
-	target_goal = 15
+	target_goal = 26
 	game_state = ""
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_1):
-		get_tree().reload_current_scene()
+	#if Input.is_key_pressed(KEY_1):
+		#get_tree().reload_current_scene()
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
 	change_main_gui()
